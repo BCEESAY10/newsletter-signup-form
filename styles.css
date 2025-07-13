@@ -1,118 +1,142 @@
-@font-face{
-    src: url('assets/fonts/Roboto-Bold.ttf');
-    font-family: "Roboto";
+@font-face {
+  src: url("assets/fonts/Roboto-Bold.ttf");
+  font-family: "Roboto";
 }
 
-@font-face{
-    src: url('assets/fonts/Roboto-Regular.ttf');
-    font-family: "Roboto";
+@font-face {
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-family: "Roboto";
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --font-family: "Roboto", sans-serif;
-    --font-bold: 700;
-    --font-regular: 400;
-    --font-size: 16px;
+:root {
+  --font-family: "Roboto", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+  --font-size: 16px;
 
-    --content-width: 1440px;
-    --mobile-width: 375px;
+  --content-width: 1440px;
+  --mobile-width: 375px;
 
-    --red: hsl(4, 100%, 67%);
-    --blue-800: hsl(234, 29%, 20%);
-    --blue-700: hsl(235, 18%, 26%);
-    --grey: hsl(0, 0%, 58%);
-    --white: hsl(0, 0%, 100%);
+  --red: hsl(4, 100%, 67%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
 }
 
-body{
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: var(--font-regular);
-    color: var(--blue-700);
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-regular);
+  color: var(--blue-700);
 }
 
-.form-container{
-    width: 100%;
-    background-color: var(--white);
-    overflow: hidden;
+.form-container {
+  width: 100%;
+  background-color: var(--white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: var(--font-bold);
+  margin: 16px 0;
+  color: var(--blue-800);
+}
+
+p {
+  margin: 12px 0;
+}
+
+ul {
+  margin: 0 12px;
+}
+
+form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  font-weight: var(--font-bold);
+}
+
+input,
+button {
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid var(--blue-700);
+}
+
+button {
+  background-color: var(--blue-800);
+  color: var(--white);
+  font-weight: var(--font-bold);
+}
+button:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+/* Tablet responsiveness */
+
+@media (min-width: 48em) {
+  .container {
+    background-color: var(--blue-800);
+    width: var(--content-width);
+    height: 100vh;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 1.5em;
-}
+  }
+  .form-container {
+    width: 40em;
+    border-radius: 1em;
+    padding: 1.5em;
+  }
 
-h1{
-    font-size: 2.5em;
-    font-weight: var(--font-bold);
-    margin: 16px 0;
-    color: var(--blue-800);
+  .form-component {
+    padding: 0.5em;
+  }
 }
-
-p{
-    margin: 12px 0;
-}
-
-ul{
-    margin: 0 12px;
-}
-
-form{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-label{
-    font-size: 12px;
-    font-weight: var(--font-bold);
-}
-
-input, button{
-    padding: 10px 12px;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: 1px solid var(--blue-700);
-}
-
-button{
-    background-color: var(--blue-800);
-    color: var(--white);
-    font-weight: var(--font-bold);
-}
-button:hover{
-    background-color: black;
-    cursor: pointer;
-}
-
 
 /* Desktop responsiveness */
 
-@media (min-width: 48em){
-    .container{
-        background-color: var(--blue-800);
-        width: var(--content-width);
-        margin: 0 auto;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .form-container{
-        width: 50em;
-        border-radius: 1em;
-        padding: 1.5em;
-        display: flex;
-        flex-direction: row-reverse;
-    }
+@media (min-width: 75em) {
+  .container {
+    background-color: var(--blue-800);
+    width: var(--content-width);
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .form-component{
-        padding: 3em;
-    }
+  .form-container {
+    width: 55vw;
+    border-radius: 1em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .form-component {
+    padding: 1.5em;
+  }
 }
