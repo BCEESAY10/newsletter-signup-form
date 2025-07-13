@@ -35,3 +35,34 @@ body{
     font-size: var(--font-size);
     font-weight: var(--font-regular);
 }
+
+.form-container{
+    width: 100%;
+    background-color: var(--white);
+}
+form{
+    padding: 2em;
+}
+
+
+
+/* Desktop responsiveness */
+
+@media (min-width: 48em){
+    .container{
+        background-color: var(--blue-800);
+        width: var(--content-width);
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container{
+        width: 50em;
+        padding: 1.5em;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
