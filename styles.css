@@ -105,6 +105,21 @@ button:hover {
   cursor: pointer;
 }
 
+section.hide{
+    display: none;
+}
+
+.success{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 /* Tablet responsiveness */
 
 @media (min-width: 48em) {
@@ -124,6 +139,16 @@ button:hover {
 
   .form-component {
     padding: 0.5em;
+  }
+  .success {
+      height: 16em;
+      width: 15em;
+      background-color: var(--white);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
   }
 }
 
