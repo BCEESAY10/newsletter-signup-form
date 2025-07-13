@@ -34,14 +34,29 @@ body{
     font-family: var(--font-family);
     font-size: var(--font-size);
     font-weight: var(--font-regular);
+    color: var(--blue-700);
 }
 
 .form-container{
     width: 100%;
     background-color: var(--white);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5em;
 }
-form{
-    padding: 2em;
+
+h1{
+    font-size: 2.5em;
+    font-weight: var(--font-bold);
+    margin: 16px 0;
+    color: var(--blue-800);
+}
+
+p{
+    margin: 12px 0;
 }
 
 
@@ -60,9 +75,12 @@ form{
     }
     .form-container{
         width: 50em;
-        padding: 1.5em;
         border-radius: 1em;
         display: flex;
         flex-direction: row-reverse;
+    }
+
+    .form-component{
+        padding: 3em;
     }
 }
