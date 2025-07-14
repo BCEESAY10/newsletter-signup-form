@@ -1,6 +1,9 @@
 // Script
-
 const mainImage = document.getElementById('main-image');
+const submitButton = document.getElementById('submit-btn');
+const dismissButton = document.getElementById('dismiss-btn');
+const errorMessage = document.getElementById('error-msg');
+const inputField = document.getElementById('email');
 
 function updateImage() {
   if (window.innerWidth >= 1200) {
@@ -17,3 +20,17 @@ updateImage();
 
 // Run it whenever the window resizes
 window.addEventListener('resize', updateImage);
+
+
+// Form Validation
+const validators = "!~`/,><][{}()\|-_*".split("");
+
+function submitForm(){
+    if(inputField.value === "" || validators.some(char => inputField.value.includes(char)) || !inputField.value.includes('@') ){
+        alert("Invalid");
+    }else{
+        alert("Valid");
+    }
+}
+
+submitButton.addEventListener('click', submitForm);
