@@ -25,11 +25,12 @@ window.addEventListener('resize', updateImage);
 // Form Validation
 const validators = "!~`/,><][{}()\|-_*".split("");
 
-function submitForm(){
+function submitForm(e){
+    e.preventDefault();
     if(inputField.value === "" || validators.some(char => inputField.value.includes(char)) || !inputField.value.includes('@') ){
-        alert("Invalid");
+        errorMessage.innerText = "Valid email required";
     }else{
-        alert("Valid");
+        errorMessage.innerText = "";
     }
 }
 
