@@ -146,8 +146,8 @@ section.hide{
     padding: 0.5em;
   }
   .success {
-      height: 16em;
-      width: 15em;
+      height: fit-content;
+      width: 20em;
       background-color: var(--white);
       border-radius: 10px;
       display: flex;
