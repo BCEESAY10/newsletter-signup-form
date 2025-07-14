@@ -4,6 +4,8 @@ const submitButton = document.getElementById('submit-btn');
 const dismissButton = document.getElementById('dismiss-btn');
 const errorMessage = document.getElementById('error-msg');
 const inputField = document.getElementById('email');
+const successPopup = document.getElementById('success');
+const formContainer = document.querySelector('.form-container');
 
 function updateImage() {
   if (window.innerWidth >= 1200) {
@@ -33,6 +35,8 @@ function submitForm(e){
     }else{
         errorMessage.innerText = "";
         inputField.classList.remove('error');
+        successPopup.classList.remove('hide');
+        formContainer.classList.add('hide');
     }
 }
 
