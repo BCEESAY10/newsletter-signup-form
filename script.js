@@ -29,8 +29,10 @@ function submitForm(e){
     e.preventDefault();
     if(inputField.value === "" || validators.some(char => inputField.value.includes(char)) || !inputField.value.includes('@') ){
         errorMessage.innerText = "Valid email required";
+        inputField.classList.add('error');
     }else{
         errorMessage.innerText = "";
+        inputField.classList.remove('error');
     }
 }
 
