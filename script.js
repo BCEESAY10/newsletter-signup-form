@@ -41,3 +41,8 @@ function submitForm(e){
 }
 
 submitButton.addEventListener('click', submitForm);
+dismissButton.addEventListener('click', () => {
+    successPopup.classList.add('hide');
+    formContainer.classList.remove('hide');
+    inputField.value = "";
+})
