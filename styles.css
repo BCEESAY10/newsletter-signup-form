@@ -93,6 +93,7 @@ button {
   margin: 10px 0;
   border-radius: 6px;
   border: 1px solid var(--blue-700);
+  cursor: pointer;
 }
 
 button {
@@ -101,7 +102,7 @@ button {
   font-weight: var(--font-bold);
 }
 button:hover {
-  background-color: black;
+  background-color: var(--red);
   cursor: pointer;
 }
 
