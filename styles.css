@@ -85,6 +85,18 @@ form {
 label {
   font-size: 12px;
   font-weight: var(--font-bold);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+label span{
+    color: var(--red);
+}
+
+input.error{
+    border: 2px solid var(--red);
+    color: var(--red);
+    background-color: hsla(1, 100%, 90%, 0.988);
 }
 
 input,
